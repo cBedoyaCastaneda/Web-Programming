@@ -1,0 +1,138 @@
+h1 {
+    text-align: center;
+    transition-property: transform;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0s;
+    transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+
+}
+
+body {
+    background-color: rgb(16, 16, 29);
+    color: white;
+    font-family: 'Segoe UI';
+    text-align: center;
+}
+
+h1:hover {
+    transform: scale(1.8);
+}
+
+form {
+    text-align: center;
+}
+
+.square {
+    width: 100px;
+    height: 100px;
+    background: rgb(255, 197, 7);
+    margin: 70px auto;
+    transition: all 0.75s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+    transform-origin: center center;
+
+}
+
+.square:hover {
+    transform: rotate(360deg) scale(2);
+    background-color: rgb(187, 140, 0);
+}
+
+button,
+#submit {
+    padding: 4px;
+    margin: 10px 10px;
+    color: aliceblue;
+    background-color: coral;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+button:hover,
+#submit:hover {
+    background-color: #ff5416;
+    padding-left: 20px;
+    padding-right: 20px;
+    transition-timing-function: cubic-bezier(0.22, 1, 0.6, 0.7);
+}
+
+input {
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+#img {
+    transition: opacity 0.5s cubic-bezier(0.1, 0.8, 0.1, 1),
+        transform 0.5s cubic-bezier(0.1, 0.8, 0.1, 1),
+        filter 0.5s cubic-bezier(0.1, 0.8, 0.1, 1),
+        scale 0.3s cubic-bezier(0.1, 0.8, 0.1, 1);
+
+    transition-duration: 1s;
+    opacity: 1;
+    transform: scale(1);
+}
+
+#img:hover {
+    opacity: 1;
+    filter: brightness(1.1);
+    scale: 0.95;
+}
+
+.text-switcher {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    cursor: pointer;
+}
+
+.text-switcher span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    transition: opacity 0.5s cubic-bezier(0.1, 1, 0.1, 1),
+        scale 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+    opacity: 0;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    font-size: 1.1em;
+}
+
+.text-switcher .text-front {
+    scale: 1;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.text-switcher.active .text-front {
+    scale: 1.2;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.text-switcher.active .text-back {
+    scale: 1.2;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.low {
+    margin-top: 50px;
+    width: 100%;
+    height: 100px;
+    background: rgb(255, 197, 7);
+    margin: 0px auto;
+}
